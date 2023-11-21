@@ -15,7 +15,15 @@ Since my concept was quite simple I did not need to change anything to my origin
 # 4. Link to theory lesson
 Everything required for the setup of Ionic and Android studio I've found to be quite useful.
 # 5. Screenshots
-
+[![create-Profile-PC.png](https://i.postimg.cc/3rgdKPkv/create-Profile-PC.png)](https://postimg.cc/fkRwCqjz)
+[![my-Profile-PC.png](https://i.postimg.cc/W4B1Vnj8/my-Profile-PC.png)](https://postimg.cc/xkP2yLXN)
+[![delete-Profile-PC.png](https://i.postimg.cc/Hxbskykg/delete-Profile-PC.png)](https://postimg.cc/qhMdmgKb)
+[![create-Profile-Android.jpg](https://i.postimg.cc/gkzkGr9C/create-Profile-Android.jpg)](https://postimg.cc/ThsX9d30)
+[![created-Profile-Android.jpg](https://i.postimg.cc/hP24vgcf/created-Profile-Android.jpg)](https://postimg.cc/ppnMcw9H)
+[![my-Profile-Android.jpg](https://i.postimg.cc/W1K2mnDV/my-Profile-Android.jpg)](https://postimg.cc/NK6qBR7C)
+[![delete-Profile-Android.jpg](https://i.postimg.cc/bvtqmtbt/delete-Profile-Android.jpg)](https://postimg.cc/VSzy65Kf)
+[![deleted-Profile-Android.jpg](https://i.postimg.cc/PxnT95zF/deleted-Profile-Android.jpg)](https://postimg.cc/LqDcZRWz)
+You can find these screenshots in the `docs` folder in the IonicProject folder of the repository in case that these links do not work.
 # 6. Conclusion
 So far I have found that transitioning from PC to Android with Ionic was extremely smooth and not complicated. Everything I had made for PC worked on the first try on Android except I had to change some permissions but that was really all that I had to do. I've found it to be much more straight forward than using the Qt cross-compiler from the previous assignment.
 # 7. Comparison
