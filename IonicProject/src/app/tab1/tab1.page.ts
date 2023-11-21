@@ -31,7 +31,7 @@ export class Tab1Page {
   saveUserData() {
     if (!this.userData.name || !this.userData.email) {
       this.presentErrorAlert('Please fill in all required fields.');
-      return; // Do not proceed if required fields are not filled
+      return;
     }
     this.userService.setUserData(this.userData);
     this.presentSuccessAlert('Successfully created profile!');
@@ -46,7 +46,7 @@ export class Tab1Page {
 
     await alert.present();
   }
-  
+
   async presentErrorAlert(message: string) {
     const alert = await this.alertController.create({
       header: 'Error',

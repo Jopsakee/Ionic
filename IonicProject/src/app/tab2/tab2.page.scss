@@ -1,4 +1,3 @@
-/* src/app/tab2/tab2.page.scss */
 .profile-image-container {
     text-align: center;
   }
@@ -11,4 +10,14 @@
     object-fit: contain;
     margin: auto;
   }
-  
+
+  .edit-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }

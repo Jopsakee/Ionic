@@ -8,7 +8,10 @@ export class UserService {
   private userDataSubject = new BehaviorSubject<any>({});
   userData$: Observable<any> = this.userDataSubject.asObservable();
 
-  setUserData(data: any) {
+  setUserData(data: any, profilePicture?: string) {
+    if (profilePicture) {
+      data = { ...data, profilePicture };
+    }
     this.userDataSubject.next(data);
   }
 

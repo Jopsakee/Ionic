@@ -9,6 +9,7 @@
 <ion-content class="ion-padding">
   <div class="profile-image-container">
     <img [src]="userData.profilePicture" alt="Profile Picture" class="profile-image" *ngIf="userData.profilePicture" />
+    <div class="edit-text" *ngIf="userData.profilePicture" (click)="editProfilePicture()">Edit</div>
   </div>
 
   <ion-list *ngIf="userData && (userData.name || userData.email)">
