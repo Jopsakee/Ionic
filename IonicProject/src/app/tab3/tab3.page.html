@@ -1,17 +1,15 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Delete your Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content class="ion-padding">
+  <div *ngIf="!userData || (!userData.name && !userData.email)">
+    <p>There is no profile to delete.</p>
+  </div>
+  <div *ngIf="userData.profilePicture || (userData.name && userData.email)">
+    <p>Are you sure you want to delete your profile?</p>
+    <ion-button  (click)="deleteProfile()">Delete Profile</ion-button>
+  </div>
 </ion-content>

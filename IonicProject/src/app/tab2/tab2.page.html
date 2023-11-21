@@ -21,4 +21,9 @@
       <ion-text>{{ userData.email }}</ion-text>
     </ion-item>
   </ion-list>
+
+  <div *ngIf="!userData || (!userData.name && !userData.email)">
+    <p>You haven't created a profile yet. Please go to the Create Profile page.</p>
+    <ion-button (click)="goToCreateProfile()">Go to Create Profile</ion-button>
+  </div>
 </ion-content>

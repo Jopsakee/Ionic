@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { Camera, CameraResultType } from '@capacitor/camera';
 import { UserService } from '../services/data.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -11,7 +12,11 @@ import { UserService } from '../services/data.service';
 export class Tab1Page {
   userData = { name: '', email: '', profilePicture: '' };
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private alertController: AlertController) {
+    this.userService.userData$.subscribe((data) => {
+      this.userData = data;
+    });
+  }
 
   async takeProfilePicture() {
     const image = await Camera.getPhoto({
@@ -24,7 +29,32 @@ export class Tab1Page {
   }
 
   saveUserData() {
+    if (!this.userData.name || !this.userData.email) {
+      this.presentErrorAlert('Please fill in all required fields.');
+      return; // Do not proceed if required fields are not filled
+    }
     this.userService.setUserData(this.userData);
+    this.presentSuccessAlert('Successfully created profile!');
+  }
+
+  async presentSuccessAlert(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Success',
+      message: message,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+  
+  async presentErrorAlert(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      message: message,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 }
 
