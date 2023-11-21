@@ -1,0 +1,25 @@
+<!-- src/app/tab2/tab2.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Profile Display
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-image-container">
+    <img [src]="userData.profilePicture" alt="Profile Picture" class="profile-image" *ngIf="userData.profilePicture" />
+  </div>
+
+  <ion-list *ngIf="userData && (userData.name || userData.email)">
+    <ion-item *ngIf="userData.name">
+      <ion-label>Name:</ion-label>
+      <ion-text>{{ userData.name }}</ion-text>
+    </ion-item>
+    <ion-item *ngIf="userData.email">
+      <ion-label>Email:</ion-label>
+      <ion-text>{{ userData.email }}</ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>

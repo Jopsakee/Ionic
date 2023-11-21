@@ -1,0 +1,14 @@
+/* src/app/tab2/tab2.page.scss */
+.profile-image-container {
+    text-align: center;
+  }
+  
+  .profile-image {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+  }
+  
