@@ -20,6 +20,10 @@
       <ion-label>Email:</ion-label>
       <ion-text>{{ userData.email }}</ion-text>
     </ion-item>
+    <ion-item>
+      <ion-label>Bio:</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
   </ion-list>
 
   <div *ngIf="!userData || (!userData.name && !userData.email)">
